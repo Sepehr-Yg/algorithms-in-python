@@ -1,0 +1,50 @@
+# Selection Sort
+
+An in-place sorting algorithm that repeatedly finds the smallest element
+in the unsorted part of the list and moves it to the front.
+
+## How It Works
+
+1. Split the list into a sorted region (starts empty) and an unsorted region.
+2. Find the smallest element in the unsorted region.
+3. Swap it into place at the end of the sorted region.
+4. Repeat until the unsorted region is empty.
+
+**Example:** `[64, 25, 12, 22, 11]` → `[11, 12, 22, 25, 64]`
+Each pass finds the current minimum and swaps it to the front: `11` first, then `12`, then `22`, then `25`.
+
+## Usage
+
+```python
+from selection_sort import selection_sort
+
+data = [64, 25, 12, 22, 11]
+print(selection_sort(data))  # [11, 12, 22, 25, 64]
+```
+
+## Complexity
+
+| Case    | Time  | Space |
+|---------|-------|-------|
+| Best    | O(n²) | O(1)  |
+| Average | O(n²) | O(1)  |
+| Worst   | O(n²) | O(1)  |
+
+Not stable — equal elements can change relative order.
+
+## When to Use It
+
+Its one real advantage is a low number of swaps (at most n − 1), which
+matters if writes are expensive (e.g., flash memory). Otherwise, insertion
+sort is usually a better O(n²) choice in practice.
+
+## Running the Example
+
+```bash
+python example.py
+```
+
+## Related
+
+- Article link: coming soon
+- Part of the [algorithms-in-python](https://github.com/Sepehr-Yg/algorithms-in-python) repository.
